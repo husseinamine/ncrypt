@@ -7,7 +7,7 @@
 ```go
 import (
     "fmt"
-    "diffie"
+    "github.com/husseinraed/diffie"
 )
 
 var d1 diffie.DiffieHellman
