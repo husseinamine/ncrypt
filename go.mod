@@ -1,4 +1,4 @@
-module diffie
+module github.com/husseinraed/diffie
 
 go 1.15
 
