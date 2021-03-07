@@ -13,8 +13,8 @@ import (
 var d1 diffie.DiffieHellman
 var d2 diffie.DiffieHellman
 
-d1_publickey := d1.GenPublicKey()
-d2_publickey := d2.GenPublicKey()
+d1_publickey, _ := d1.GenPublicKey()
+d2_publickey, _ := d2.GenPublicKey()
 
 d1_sharedkey := d1.GenSharedKey(d2_publickey)
 d2_sharedkey := d2.GenSharedKey(d1_publickey)
