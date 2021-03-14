@@ -16,8 +16,8 @@ var d2 diffie.DiffieHellman
 d1_publickey, _ := d1.GenPublicKey()
 d2_publickey, _ := d2.GenPublicKey()
 
-d1_sharedkey := d1.GenSharedKey(d2_publickey)
-d2_sharedkey := d2.GenSharedKey(d1_publickey)
+d1_sharedkey, _ := d1.GenSharedKey(d2_publickey)
+d2_sharedkey, _ := d2.GenSharedKey(d1_publickey)
 
 fmt.Println(d1_sharedkey == d2_sharedkey)
 ```

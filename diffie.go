@@ -32,18 +32,14 @@ func (d *DiffieHellman) GenPublicKey() (string, error) {
 }
 
 // GenSharedKey : generates a shared key
-func (d *DiffieHellman) GenSharedKey(publicKeyBase64 string) string {
+func (d *DiffieHellman) GenSharedKey(publicKeyBase64 string) (string, error) {
 	var publicKey []byte
 
 	publicKeyJSON, err := base64.StdEncoding.DecodeString(publicKeyBase64)
-
-	if err != nil {
-		fmt.Println(err)
-	}
 
 	json.Unmarshal(publicKeyJSON, &publicKey)
 
 	sharedKey := cipher.ComputeSecret(d.PrivateKey, crypto.PublicKey(publicKey))
 
-	return fmt.Sprintf("%x", md5.Sum(sharedKey))
+	return fmt.Sprintf("%x", md5.Sum(sharedKey)), err
 }
