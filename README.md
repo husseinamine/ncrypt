@@ -7,11 +7,11 @@
 ```go
 import (
     "fmt"
-    "github.com/husseinraed/diffie"
+    "github.com/husseinamine/ncrypt"
 )
 
-var d1 diffie.DiffieHellman
-var d2 diffie.DiffieHellman
+var d1 ncrypt.DiffieHellman
+var d2 ncrypt.DiffieHellman
 
 d1_publickey, _ := d1.GenPublicKey()
 d2_publickey, _ := d2.GenPublicKey()
