@@ -1,4 +1,4 @@
-package diffie // import "diffie"
+package ncrypt // import "ncrypt"
 
 import (
 	"crypto"
